@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>TMBAPIAssignment</groupId>
-  <artifactId>TMBAssignment</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>TMBAPIAssignment</groupId>
+	<artifactId>TMBAssignment</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<rest-assured.version>4.4.0</rest-assured.version>
 		<allure.testng.version>2.17.0</allure.testng.version>
@@ -17,8 +19,8 @@
 		<maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
 		<env>test</env>
 	</properties>
-  
-  <build>
+
+	<build>
 		<testResources>
 			<testResource>
 				<directory>src/test/resources/config</directory>
@@ -95,10 +97,10 @@
 
 		</plugins>
 	</build>
-  
-  
-  	<dependencies>
-  	
+
+
+	<dependencies>
+
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -176,7 +178,15 @@
 			<artifactId>json-schema-validator</artifactId>
 			<version>4.5.0</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.github.sskorol/test-data-supplier -->
+		<dependency>
+			<groupId>io.github.sskorol</groupId>
+			<artifactId>test-data-supplier</artifactId>
+			<version>1.9.6</version>
+		</dependency>
+
 
 	</dependencies>
-  
+
 </project>
