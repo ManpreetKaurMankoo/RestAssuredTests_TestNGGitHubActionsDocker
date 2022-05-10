@@ -10,9 +10,9 @@ import org.aeonbits.owner.Config;
 })
 public interface FrameworkConfig extends Config {
 
-	//	@DefaultValue("https://beta.karza.in")
-	//	@Key("baseuri")
-	//	String baseURI();
+	@DefaultValue("https://reqres.in")
+	@Key("baseuri")
+	String baseURI();
 
 	// Try combining the second approach (using static block) with final approach(owner)to take care of exceptions
 
@@ -22,6 +22,9 @@ public interface FrameworkConfig extends Config {
 	//	@DefaultValue("reqres.in")
 	String env();
 
-	@Key("${env}baseuri")
-	String baseURI();
+	//	@Key("${env}baseuri")
+	//	String baseURI();
+	//
+	//	@Key("baseuri")
+	//	String baseURI();
 }

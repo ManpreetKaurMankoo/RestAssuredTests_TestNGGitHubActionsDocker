@@ -24,8 +24,6 @@ public final class RequestResponseSpecCreatorUtils {
 
 		if(request==null) {
 
-			System.out.println("env: " + createConfigFactory().env());
-
 			request = new RequestSpecBuilder()
 					.setBaseUri(createConfigFactory().baseURI())
 					.addHeader("Content-Type", createConfigFactory().contentType())

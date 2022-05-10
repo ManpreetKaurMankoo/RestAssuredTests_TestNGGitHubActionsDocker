@@ -22,8 +22,13 @@ public final class CreateUserTest {
 	@Test(dataProvider = "getData")
 	public void createUserTest(UserRequestPOJO data) {
 
+		System.out.println("Inside test");
+
 		Response response = hitPOSTAPI(withUserPayload(data), withUserEndpoint());
+		System.out.println("response: " + response);
 		UserResponsePOJO parsedResponse = parseResponse(response, UserResponsePOJO.class);
+		System.out.println("Parsed response: " + parsedResponse);
+
 
 		assertThat(response.getStatusCode()).isEqualTo(201);
 		assertThat(parsedResponse.getName()).isEqualTo("expectedName");
@@ -35,9 +40,13 @@ public final class CreateUserTest {
 	public StreamEx<UserRequestPOJO> getData() {
 		return use(JsonReader.class)
 				.withTarget(UserRequestPOJO.class)
-				.withSource("testdata.json")
+				.withSource("testdata/testdata.json")
 				.read();
 	}
 
+	//	@DataSupplier
+	//	public Object[][] getData() {
+	//		return new Object[][] {{"Name1", "Job1"}, {"Name2", "Job2"}};
+	//	}
 
 }
