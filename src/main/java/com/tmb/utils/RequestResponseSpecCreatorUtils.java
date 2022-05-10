@@ -20,7 +20,7 @@ public final class RequestResponseSpecCreatorUtils {
 
 		System.out.println("Inside requestSpecification");
 
-		// Remove unwanted things, return directly
+		// Remove unwanted things, return directly, try to make use of optional
 
 		if(request==null) {
 
