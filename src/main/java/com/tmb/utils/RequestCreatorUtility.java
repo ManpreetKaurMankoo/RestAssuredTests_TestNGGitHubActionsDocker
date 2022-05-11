@@ -12,15 +12,6 @@ public final class RequestCreatorUtility {
 
 	@Step
 	public static <T> Response hitPOSTAPI(T data, String endpoint) {
-
-		System.out.println("Inside hitPOSTAPI");
-
-		System.out.println("request: " + given()
-		.spec(requestSpecification())
-		.body(data)
-		.when().log().all().post(endpoint));
-
-
 		return given()
 				.spec(requestSpecification())
 				.body(data)

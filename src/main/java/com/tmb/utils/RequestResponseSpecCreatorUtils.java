@@ -18,7 +18,7 @@ public final class RequestResponseSpecCreatorUtils {
 
 	public static RequestSpecification requestSpecification() {
 
-		System.out.println("Inside requestSpecification");
+		//		System.out.println("Inside requestSpecification");
 
 		// Remove unwanted things, return directly, try to make use of optional
 
@@ -30,7 +30,7 @@ public final class RequestResponseSpecCreatorUtils {
 					.addFilter(new AllureRestAssured())
 					.build();
 
-			System.out.println("Request: " + request);
+			//			System.out.println("Request: " + request);
 
 			return request;
 		}

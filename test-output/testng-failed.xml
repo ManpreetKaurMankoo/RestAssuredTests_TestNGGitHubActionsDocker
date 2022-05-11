@@ -5,7 +5,7 @@
     <classes>
       <class name="com.tmb.tests.CreateUserTest">
         <methods>
-          <include name="createUserTest" invocation-numbers="0 1"/>
+          <include name="createUserTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.tmb.tests.CreateUserTest -->
     </classes>

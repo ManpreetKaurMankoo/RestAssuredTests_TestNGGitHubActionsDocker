@@ -9,77 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">8,346</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">46,155</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.tmb.tests.CreateUserTest</td><td><a href="#m0">createUserTest</a></td><td rowspan="2">1652165472061</td><td rowspan="2">7370</td></tr><tr class="failedeven"><td><a href="#m1">createUserTest</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tmb.tests.CreateUserTest</td><td><a href="#m0">createUserTest</a></td><td rowspan="1">1652275215522</td><td rowspan="1">21549</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tmb.tests.CreateUserTest</td><td><a href="#m1">createUserTest</a></td><td rowspan="1">1652275191079</td><td rowspan="1">24388</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.tmb.pojos.UserRequestPOJO@5778826f</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;id&quot; (class com.tmb.pojos.UserResponsePOJO), not marked as ignorable (2 known properties: &quot;name&quot;, &quot;job&quot;])
- at [Source: (String)&quot;{&quot;name&quot;:&quot;admin&quot;,&quot;job&quot;:&quot;admin&quot;,&quot;id&quot;:&quot;945&quot;,&quot;createdAt&quot;:&quot;2022-05-10T06:51:18.991Z&quot;}&quot;; line: 1, column: 37] (through reference chain: com.tmb.pojos.UserResponsePOJO[&quot;id&quot;])
-	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
-	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1989)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630)
-	at com.fasterxml.jackson.databind.ObjectMapper$readValue$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
-	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
-	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
-	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
-	at com.tmb.utils.ResponseParserUtility.parseResponse(ResponseParserUtility.java:14)
-	at com.tmb.tests.CreateUserTest.createUserTest(CreateUserTest.java:29)
+<h2>Test</h2><h3 id="m0">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.tmb.pojos.User@7cca31fc</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Name does not match
+	at com.tmb.assertions.UserAssert.hasName(UserAssert.java:21)
+	at com.tmb.tests.CreateUserTest.createUserTest(CreateUserTest.java:39)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.tmb.pojos.UserRequestPOJO@677cc4e8</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;id&quot; (class com.tmb.pojos.UserResponsePOJO), not marked as ignorable (2 known properties: &quot;name&quot;, &quot;job&quot;])
- at [Source: (String)&quot;{&quot;name&quot;:&quot;ronaldo&quot;,&quot;job&quot;:&quot;player&quot;,&quot;id&quot;:&quot;431&quot;,&quot;createdAt&quot;:&quot;2022-05-10T06:51:19.904Z&quot;}&quot;; line: 1, column: 40] (through reference chain: com.tmb.pojos.UserResponsePOJO[&quot;id&quot;])
-	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
-	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1989)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630)
-	at com.fasterxml.jackson.databind.ObjectMapper$readValue$1.call(Unknown Source)
-	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
-	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
-	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
-	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
-	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
-	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
-	at com.tmb.utils.ResponseParserUtility.parseResponse(ResponseParserUtility.java:14)
-	at com.tmb.tests.CreateUserTest.createUserTest(CreateUserTest.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.tmb.pojos.User@9ed238c</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

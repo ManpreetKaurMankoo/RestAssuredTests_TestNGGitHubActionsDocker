@@ -1,5 +1,7 @@
 package com.tmb.tests;
 
+import static com.tmb.assertions.ResponseAssert.assertThat;
+import static com.tmb.assertions.UserAssert.assertThat;
 import static com.tmb.constants.StringEndpoints.withUserEndpoint;
 import static com.tmb.utils.RequestCreatorUtility.hitPOSTAPI;
 import static com.tmb.utils.RequestTestDataBuilder.withUserPayload;
@@ -8,7 +10,6 @@ import static io.github.sskorol.data.TestDataReader.use;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
-
 import com.tmb.pojos.User;
 
 import io.github.sskorol.core.DataSupplier;
@@ -21,17 +22,23 @@ public final class CreateUserTest {
 	@Test(dataProvider = "getData")
 	public void createUserTest(User data) {
 
-		System.out.println("Inside test");
+		//		System.out.println("Inside test");
 
 		Response response = hitPOSTAPI(withUserPayload(data), withUserEndpoint());
-		System.out.println("response: " + response);
-		User parsedResponse = parseResponse(response, User.class);
-		System.out.println("Parsed res: " + parsedResponse);
+		//		System.out.println("response: " + response);
+		User userParsedResponse = parseResponse(response, User.class);
+		//		System.out.println("Parsed res: " + parsedResponse);
 
 
-		assertThat(response.getStatusCode()).isEqualTo(201);
-		assertThat(parsedResponse.getName()).isEqualTo("expectedName");
-		assertThat(parsedResponse.getJob()).isEqualTo("expectedJob");
+		assertThat(response)
+			.gives201SuccessfulPostResponse()
+			.hasResponseTimeWithinTwoSecs()
+			.containsHeaderApplicationJson();
+		
+		assertThat(userParsedResponse)
+			.hasName("admin")
+			.hasJob("admin");
+
 		//response code, response schema, response time within 2 secs, response header, response can be deserialized to POJO
 	}
 

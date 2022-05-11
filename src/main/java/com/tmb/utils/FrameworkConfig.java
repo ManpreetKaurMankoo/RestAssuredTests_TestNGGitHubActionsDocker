@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
 	"system:properties",
 	"system:env",
-	"file:${user.dir}/src/test/resources/config/config.properties"
+	"file:${user.dir}/src/test/resources/configdata/config.properties"
 })
 public interface FrameworkConfig extends Config {
 
@@ -18,13 +18,4 @@ public interface FrameworkConfig extends Config {
 
 	@Key("contenttype")
 	String contentType();
-
-	//	@DefaultValue("reqres.in")
-	String env();
-
-	//	@Key("${env}baseuri")
-	//	String baseURI();
-	//
-	//	@Key("baseuri")
-	//	String baseURI();
 }
