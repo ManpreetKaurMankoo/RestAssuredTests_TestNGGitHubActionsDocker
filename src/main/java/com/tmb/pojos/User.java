@@ -5,9 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserRequestPOJO {
-	
-	private UserRequestPOJO() {}
+public class User {
 
 	private String name;
 	private String job;

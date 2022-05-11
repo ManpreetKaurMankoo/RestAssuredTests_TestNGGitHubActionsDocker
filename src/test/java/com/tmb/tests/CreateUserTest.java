@@ -9,8 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
 
-import com.tmb.pojos.UserRequestPOJO;
-import com.tmb.pojos.UserResponsePOJO;
+import com.tmb.pojos.User;
 
 import io.github.sskorol.core.DataSupplier;
 import io.github.sskorol.data.JsonReader;
@@ -20,14 +19,14 @@ import one.util.streamex.StreamEx;
 public final class CreateUserTest {
 
 	@Test(dataProvider = "getData")
-	public void createUserTest(UserRequestPOJO data) {
+	public void createUserTest(User data) {
 
 		System.out.println("Inside test");
 
 		Response response = hitPOSTAPI(withUserPayload(data), withUserEndpoint());
 		System.out.println("response: " + response);
-		UserResponsePOJO parsedResponse = parseResponse(response, UserResponsePOJO.class);
-		System.out.println("Parsed response: " + parsedResponse);
+		User parsedResponse = parseResponse(response, User.class);
+		System.out.println("Parsed res: " + parsedResponse);
 
 
 		assertThat(response.getStatusCode()).isEqualTo(201);
@@ -37,9 +36,9 @@ public final class CreateUserTest {
 	}
 
 	@DataSupplier
-	public StreamEx<UserRequestPOJO> getData() {
+	public StreamEx<User> getData() {
 		return use(JsonReader.class)
-				.withTarget(UserRequestPOJO.class)
+				.withTarget(User.class)
 				.withSource("testdata/testdata.json")
 				.read();
 	}
