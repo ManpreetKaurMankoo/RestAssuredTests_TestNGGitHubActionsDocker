@@ -11,7 +11,7 @@ public final class ResponseParserUtility {
 	public static <T> T parseResponse(Response response, Class<T> className) {
 
 		Response extractedResponse = response.then().spec(responseSpecification()).log().all().extract().response();
+		System.out.println("extractedResponse" + extractedResponse);
 		return extractedResponse.as(className);
 	}
-
 }

@@ -7,9 +7,9 @@ import static com.tmb.utils.RequestCreatorUtility.hitPOSTAPI;
 import static com.tmb.utils.RequestTestDataBuilder.withUserPayload;
 import static com.tmb.utils.ResponseParserUtility.parseResponse;
 import static io.github.sskorol.data.TestDataReader.use;
-import static org.assertj.core.api.Assertions.assertThat;
 
 import org.testng.annotations.Test;
+
 import com.tmb.pojos.User;
 
 import io.github.sskorol.core.DataSupplier;
@@ -25,19 +25,24 @@ public final class CreateUserTest {
 		//		System.out.println("Inside test");
 
 		Response response = hitPOSTAPI(withUserPayload(data), withUserEndpoint());
-		//		System.out.println("response: " + response);
+		System.out.println("response: " + response);
 		User userParsedResponse = parseResponse(response, User.class);
-		//		System.out.println("Parsed res: " + parsedResponse);
+		System.out.println("Parsed res: " + userParsedResponse);
+
 
 
 		assertThat(response)
-			.gives201SuccessfulPostResponse()
-			.hasResponseTimeWithinTwoSecs()
-			.containsHeaderApplicationJson();
-		
+		.gives201SuccessfulPostResponse()
+		.hasExpectedResponseJsonSchema()
+		.hasResponseTimeWithinTwoSecs()
+		.containsHeaderApplicationJson();
+
 		assertThat(userParsedResponse)
-			.hasName("admin")
-			.hasJob("admin");
+		.hasName(data.getName())
+		.hasJob(data.getJob());
+
+		//		response.then().spec(com.tmb.utils.RequestResponseSpecCreatorUtils.responseSpecification()).assertThat().log().all().body(
+		//				matchesJsonSchema(new File("user.json")));
 
 		//response code, response schema, response time within 2 secs, response header, response can be deserialized to POJO
 	}
