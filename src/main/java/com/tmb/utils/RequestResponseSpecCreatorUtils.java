@@ -2,6 +2,8 @@ package com.tmb.utils;
 
 import static com.tmb.utils.FrameworkConfigFactory.createConfigFactory;
 
+import java.util.Optional;
+
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -22,32 +24,45 @@ public final class RequestResponseSpecCreatorUtils {
 
 		// Remove unwanted things, return directly, try to make use of optional
 
-		if(request==null) {
+		return Optional.ofNullable(request)
+				.orElse(new RequestSpecBuilder()
+						.setBaseUri(createConfigFactory().baseURI())
+						.addHeader("Content-Type", createConfigFactory().contentType())
+						.addFilter(new AllureRestAssured())
+						.build());
 
-			request = new RequestSpecBuilder()
-					.setBaseUri(createConfigFactory().baseURI())
-					.addHeader("Content-Type", createConfigFactory().contentType())
-					.addFilter(new AllureRestAssured())
-					.build();
-
-			//			System.out.println("Request: " + request);
-
-			return request;
-		}
-		return request;
+		//		if(Objects.nonNull(request)) {
+		//
+		//			request = new RequestSpecBuilder()
+		//					.setBaseUri(createConfigFactory().baseURI())
+		//					.addHeader("Content-Type", createConfigFactory().contentType())
+		//					.addFilter(new AllureRestAssured())
+		//					.build();
+		//
+		//			//			System.out.println("Request: " + request);
+		//
+		//			return request;
+		//		}
+		//		return request;
 	}
 
 	public static ResponseSpecification responseSpecification() {
 
-		if(response==null) {
+		return Optional.ofNullable(response)
+				.orElse(new ResponseSpecBuilder()
+						.expectContentType(ContentType.JSON)
+						.build());
 
-			response = new ResponseSpecBuilder()
-					.expectContentType(ContentType.JSON)
-					.build();
 
-			return response;
-		}
-		return response;
+		//		if(Objects.nonNull(response)) {
+		//
+		//			response = new ResponseSpecBuilder()
+		//					.expectContentType(ContentType.JSON)
+		//					.build();
+		//
+		//			return response;
+		//		}
+		//		return response;
 	}
 
 
