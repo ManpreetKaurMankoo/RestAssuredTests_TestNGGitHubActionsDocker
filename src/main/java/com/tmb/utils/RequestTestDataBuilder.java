@@ -9,7 +9,7 @@ public class RequestTestDataBuilder {
 	public static User getUserPayload(User data) {
 
 		return User.builder()
-				.setJob(data.getName())
+				.setName(data.getName())
 				.setJob(data.getJob())
 				.build();
 

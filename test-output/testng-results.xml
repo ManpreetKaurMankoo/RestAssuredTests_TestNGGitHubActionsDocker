@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-16T12:44:46 IST" name="Suite" finished-at="2022-05-16T12:44:57 IST" duration-ms="11738">
+  <suite started-at="2022-05-16T17:02:57 IST" name="Suite" finished-at="2022-05-16T17:03:44 IST" duration-ms="46382">
     <groups>
     </groups>
-    <test started-at="2022-05-16T12:44:46 IST" name="Test" finished-at="2022-05-16T12:44:57 IST" duration-ms="11738">
+    <test started-at="2022-05-16T17:02:57 IST" name="Test" finished-at="2022-05-16T17:03:44 IST" duration-ms="46382">
       <class name="com.tmb.tests.CreateUserTest">
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T12:44:46 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T12:44:57 IST" duration-ms="10792" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T17:02:58 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T17:03:22 IST" duration-ms="24614" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T12:44:57 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T12:44:57 IST" duration-ms="548" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T17:03:22 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T17:03:44 IST" duration-ms="21508" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.tmb.pojos.User@32ba5c65]]>
+                <![CDATA[com.tmb.pojos.User@3e2c4d4b]]>
               </value>
             </param>
           </params>

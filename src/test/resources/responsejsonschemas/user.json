@@ -17,8 +17,6 @@
   },
   "required": [
     "name",
-    "job",
-    "id",
-    "createdAt"
+    "job"
   ]
 }
