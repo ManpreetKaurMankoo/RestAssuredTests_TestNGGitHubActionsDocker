@@ -6,7 +6,7 @@ public final class StringEndpoints {
 
 	private static final String USERENDPOINT = "/api/users";
 
-	public static String withUserEndpoint() {
+	public static String getUserEndpoint() {
 		return USERENDPOINT;
 	}
 

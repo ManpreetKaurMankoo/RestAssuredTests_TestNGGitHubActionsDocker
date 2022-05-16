@@ -2,9 +2,9 @@ package com.tmb.tests;
 
 import static com.tmb.assertions.ResponseAssert.assertThat;
 import static com.tmb.assertions.UserAssert.assertThat;
-import static com.tmb.constants.StringEndpoints.withUserEndpoint;
+import static com.tmb.constants.StringEndpoints.getUserEndpoint;
 import static com.tmb.utils.RequestCreatorUtility.hitPOSTAPI;
-import static com.tmb.utils.RequestTestDataBuilder.withUserPayload;
+import static com.tmb.utils.RequestTestDataBuilder.getUserPayload;
 import static com.tmb.utils.ResponseParserUtility.parseResponse;
 import static io.github.sskorol.data.TestDataReader.use;
 
@@ -24,7 +24,7 @@ public final class CreateUserTest {
 
 		//		System.out.println("Inside test");
 
-		Response response = hitPOSTAPI(withUserPayload(data), withUserEndpoint());
+		Response response = hitPOSTAPI(getUserPayload(data), getUserEndpoint());
 		System.out.println("response: " + response);
 		User userParsedResponse = parseResponse(response, User.class);
 		System.out.println("Parsed res: " + userParsedResponse);

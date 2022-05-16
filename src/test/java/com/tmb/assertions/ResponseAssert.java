@@ -44,7 +44,7 @@ public class ResponseAssert extends AbstractAssert<ResponseAssert, Response> {
 		//		.matches((new File("user.json")).toString());
 
 		actual.then().assertThat()
-		.body(matchesJsonSchema(new File("src/test/resources/jsonschemas/user.json")));
+		.body(matchesJsonSchema(new File("src/test/resources/responsejsonschemas/user.json")));
 		//		.isEqualTo(matchesJsonSchema(new File("user.json")).toString());
 		//		.withFailMessage(() -> "Response schema does not match")
 		//		.matches(matchesJsonSchema(new File("user.json")));

@@ -6,14 +6,19 @@ public class RequestTestDataBuilder {
 
 	private RequestTestDataBuilder() {}
 
-	public static User withUserPayload(User data) {
+	public static User getUserPayload(User data) {
 
-		User user = new User();
+		return User.builder()
+				.setJob(data.getName())
+				.setJob(data.getJob())
+				.build();
 
-		user.setName(data.getName());
-		user.setJob(data.getJob());
-
-		return user;
+		//		User user = new User();
+		//
+		//		user.setName(data.getName());
+		//		user.setJob(data.getJob());
+		//
+		//		return user;
 	}
 
 }

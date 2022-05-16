@@ -2,11 +2,11 @@ package com.tmb.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
+@Builder(setterPrefix = "set")
 public class User {
 
 	private String name;
