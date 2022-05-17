@@ -9,5 +9,4 @@ public final class FrameworkConfigFactory {
 	public static FrameworkConfig createConfigFactory() {
 		return ConfigFactory.create(FrameworkConfig.class);
 	}
-
 }

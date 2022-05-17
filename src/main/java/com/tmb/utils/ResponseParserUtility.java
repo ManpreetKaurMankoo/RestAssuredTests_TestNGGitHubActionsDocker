@@ -8,10 +8,8 @@ public final class ResponseParserUtility {
 
 	private ResponseParserUtility() {}
 
-	public static <T> T parseResponse(Response response, Class<T> className) {
-
+	public static <T> T parseResponse(Response response, Class<T> classType) {
 		Response extractedResponse = response.then().spec(responseSpecification()).log().all().extract().response();
-		System.out.println("extractedResponse" + extractedResponse);
-		return extractedResponse.as(className);
+		return extractedResponse.as(classType);
 	}
 }

@@ -22,29 +22,18 @@ public final class CreateUserTest {
 	@Test(dataProvider = "getData")
 	public void createUserTest(User data) {
 
-		//		System.out.println("Inside test");
-
 		Response response = hitPOSTAPI(getUserPayload(data), getUserEndpoint());
-		System.out.println("response: " + response);
 		User userParsedResponse = parseResponse(response, User.class);
-		System.out.println("Parsed res: " + userParsedResponse);
-
-
 
 		assertThat(response)
-		.gives201SuccessfulPostResponse()
-		.hasExpectedResponseJsonSchema()
-		.hasResponseTimeWithinTwoSecs()
-		.containsHeaderApplicationJson();
+				.gives201SuccessfulPostResponse()
+				.hasExpectedResponseJsonSchema()
+				.hasResponseTimeWithinTwoSecs()
+				.containsHeaderApplicationJson();
 
 		assertThat(userParsedResponse)
-		.hasName(data.getName())
-		.hasJob(data.getJob());
-
-		//		response.then().spec(com.tmb.utils.RequestResponseSpecCreatorUtils.responseSpecification()).assertThat().log().all().body(
-		//				matchesJsonSchema(new File("user.json")));
-
-		//response code, response schema, response time within 2 secs, response header, response can be deserialized to POJO
+				.hasName(data.getName())
+				.hasJob(data.getJob());
 	}
 
 	@DataSupplier
@@ -54,10 +43,4 @@ public final class CreateUserTest {
 				.withSource("testdata/testdata.json")
 				.read();
 	}
-
-	//	@DataSupplier
-	//	public Object[][] getData() {
-	//		return new Object[][] {{"Name1", "Job1"}, {"Name2", "Job2"}};
-	//	}
-
 }

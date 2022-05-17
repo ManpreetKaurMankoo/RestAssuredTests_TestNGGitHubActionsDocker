@@ -28,41 +28,10 @@ public class ResponseAssert extends AbstractAssert<ResponseAssert, Response> {
 	}
 
 	public ResponseAssert hasExpectedResponseJsonSchema() {
-
-		System.out.println("Actual response: " + actual.getBody().asString());
-		//		System.out.println("Expected response Schema: " + actual.getBody().asString().matchesJsonSchemaInClasspath("/src/test/resources/responsejsonschemas/user.json").toString());
-
-		//		JsonSchemaValidator s = matchesJsonSchemaInClasspath("user.json");
-		//		System.out.println("Schema validator: " + matchesJsonSchemaInClasspath("user.json"));
-		//		System.out.println("Schema: " + s.toString());
-		//		System.out.println("Output: " + actual.then().assertThat()
-		//				.body(matchesJsonSchema(new File("user.json"))).toString());
-		//		Assertions.assertThat(actual.then().spec(responseSpecification())
-		//				.body(matchesJsonSchema(new File("user.json"))));
-
-		//		Assertions.assertThat(actual.getBody().asString())
-		//		.matches((new File("user.json")).toString());
-
 		actual.then().assertThat()
-		.body(matchesJsonSchema(new File("src/test/resources/responsejsonschemas/user.json")));
-		//		.isEqualTo(matchesJsonSchema(new File("user.json")).toString());
-		//		.withFailMessage(() -> "Response schema does not match")
-		//		.matches(matchesJsonSchema(new File("user.json")));
+		.body(matchesJsonSchema(new File("src/test/resources/responsejsonschemas/user.json"))); // abstract out the path as constant
 		return this;
-
-		//		Assertions.assertThat(actual.body(matchesJsonSchema(new File("user.json"))).toString())
-		//		.withFailMessage(() -> "Response schema does not match")
-		//		.isEqualTo(matchesJsonSchemaInClasspath("user.json"));
-		//		return this;
-
-		//		Assertions.assertThat(actual.then().assertThat()
-		//				.body(matchesJsonSchema(new File("user.json"))));
-		//		//		.withFailMessage(() -> "Response schema does not match")
-		//		//		.matches(matchesJsonSchema(new File("user.json")));
-		//		return this;
 	}
-
-
 
 	public ResponseAssert hasResponseTimeWithinTwoSecs() {
 		Assertions.assertThat(actual.getTimeIn(TimeUnit.SECONDS))

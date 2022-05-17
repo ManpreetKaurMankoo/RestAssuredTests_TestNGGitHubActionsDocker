@@ -9,5 +9,4 @@ public final class StringEndpoints {
 	public static String getUserEndpoint() {
 		return USERENDPOINT;
 	}
-
 }

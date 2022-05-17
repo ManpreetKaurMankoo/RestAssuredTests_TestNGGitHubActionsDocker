@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-16T17:02:57 IST" name="Suite" finished-at="2022-05-16T17:03:44 IST" duration-ms="46382">
+  <suite started-at="2022-05-17T15:24:42 IST" name="Suite" finished-at="2022-05-17T15:24:47 IST" duration-ms="5196">
     <groups>
     </groups>
-    <test started-at="2022-05-16T17:02:57 IST" name="Test" finished-at="2022-05-16T17:03:44 IST" duration-ms="46382">
+    <test started-at="2022-05-17T15:24:42 IST" name="Test" finished-at="2022-05-17T15:24:47 IST" duration-ms="5196">
       <class name="com.tmb.tests.CreateUserTest">
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T17:02:58 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T17:03:22 IST" duration-ms="24614" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@798162bc]" started-at="2022-05-17T15:24:42 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-17T15:24:47 IST" duration-ms="4612" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.tmb.pojos.User@56276db8]]>
+                <![CDATA[com.tmb.pojos.User@386f0da3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@2445445a]" started-at="2022-05-16T17:03:22 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-16T17:03:44 IST" duration-ms="21508" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@798162bc]" started-at="2022-05-17T15:24:47 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-17T15:24:47 IST" duration-ms="397" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.tmb.pojos.User@3e2c4d4b]]>
+                <![CDATA[com.tmb.pojos.User@5e2a6991]]>
               </value>
             </param>
           </params>
