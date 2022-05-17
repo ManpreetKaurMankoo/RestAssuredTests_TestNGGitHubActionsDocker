@@ -1,5 +1,6 @@
 package com.tmb.assertions;
 
+import static com.tmb.constants.FrameworkConstants.getCreateUserResponseSchemaFilePath;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 
 import java.io.File;
@@ -22,28 +23,28 @@ public class ResponseAssert extends AbstractAssert<ResponseAssert, Response> {
 
 	public ResponseAssert gives201SuccessfulPostResponse() {
 		Assertions.assertThat(actual.getStatusCode())
-		.withFailMessage(() -> "Status code is not 201")
-		.isEqualTo(201);
+				.withFailMessage(() -> "Status code is not 201")
+				.isEqualTo(201);
 		return this;
 	}
 
 	public ResponseAssert hasExpectedResponseJsonSchema() {
 		actual.then().assertThat()
-		.body(matchesJsonSchema(new File("src/test/resources/responsejsonschemas/user.json"))); // abstract out the path as constant
+				.body(matchesJsonSchema(new File(getCreateUserResponseSchemaFilePath())));
 		return this;
 	}
 
 	public ResponseAssert hasResponseTimeWithinTwoSecs() {
 		Assertions.assertThat(actual.getTimeIn(TimeUnit.SECONDS))
-		.withFailMessage(() -> "Response time is not within 2 seconds")
-		.isLessThanOrEqualTo(2000);
+				.withFailMessage(() -> "Response time is not within 2 seconds")
+				.isLessThanOrEqualTo(2000);
 		return this;
 	}
 
 	public ResponseAssert containsHeaderApplicationJson() {
 		Assertions.assertThat(actual.header("Content-Type"))
-		.withFailMessage(() -> "Response does not contain Header with Content-Type as application/json")
-		.contains("application/json");
+				.withFailMessage(() -> "Response does not contain Header with Content-Type as application/json")
+				.contains("application/json");
 		return this;
 	}
 }
