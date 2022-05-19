@@ -2,7 +2,6 @@ package com.tmb.tests;
 
 import static com.tmb.assertions.ResponseAssert.assertThat;
 import static com.tmb.assertions.UserAssert.assertThat;
-import static com.tmb.constants.FrameworkConstants.getUserTestDataJsonFilePath;
 import static com.tmb.constants.StringEndpoints.getUserEndpoint;
 import static com.tmb.utils.RequestCreatorUtility.hitPOSTAPI;
 import static com.tmb.utils.RequestTestDataBuilder.getUserPayload;
@@ -27,21 +26,28 @@ public final class CreateUserTest {
 		User userParsedResponse = parseResponse(response, User.class);
 
 		assertThat(response)
-		.gives201SuccessfulPostResponse()
-		.hasExpectedResponseJsonSchema()
-		.hasResponseTimeWithinTwoSecs()
-		.containsHeaderApplicationJson();
+				.gives201SuccessfulPostResponse()
+				.hasExpectedResponseJsonSchema()
+				.hasResponseTimeWithinTwoSecs()
+				.containsHeaderApplicationJson();
 
 		assertThat(userParsedResponse)
-		.hasName(data.getName())
-		.hasJob(data.getJob());
+				.hasName(data.getName())
+				.hasJob(data.getJob());
 	}
 
 	@DataSupplier
+//	public StreamEx<User> getData() {
+//		return use(JsonReader.class)
+//				.withTarget(User.class)
+////				.withSource("\\src\\test\\resources\\testdata\\testdata.json")
+//				.withSource(getUserTestDataJsonFilePath())
+//				.read();
+//	}
 	public StreamEx<User> getData() {
 		return use(JsonReader.class)
 				.withTarget(User.class)
-				.withSource(getUserTestDataJsonFilePath())
+				.withSource("testdata/testdata.json")
 				.read();
 	}
 }

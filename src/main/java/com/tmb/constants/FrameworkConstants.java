@@ -15,4 +15,11 @@ public final class FrameworkConstants {
 	public static String getUserTestDataJsonFilePath() {
 		return USERTESTDATAJSONFILEPATH;
 	}
+
+	//	private static final String RESOURCESPATH = System.getProperty("user.dir")+"/src/test/resources";
+	//	private static final String CREATEUSERRESPONSESCHEMAFILEPATH = RESOURCESPATH + "/responsejsonschemas/user.json";
+	//
+	//	public static String getCreateUserResponseSchemaFilePath() {
+	//		return CREATEUSERRESPONSESCHEMAFILEPATH;
+	//	}
 }
