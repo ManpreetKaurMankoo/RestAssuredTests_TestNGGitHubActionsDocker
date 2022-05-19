@@ -4,4 +4,4 @@ COPY src /home/tmbapiassignment/src
 COPY test-output /home/tmbapiassignment/test-output
 COPY pom.xml /home/tmbapiassignment/pom.xml
 COPY testng.xml /home/tmbapiassignment/testng.xml
-RUN mvn clean test
+ENTRYPOINT mvn clean test
