@@ -49,7 +49,7 @@ public final class CreateUserTest {
 	public StreamEx<User> getData() {
 		return use(JsonReader.class)
 				.withTarget(User.class)
-				.withSource("testdata/testdata.json")
+				.withSource("testdata.json")
 				.read();
 	}
 }
