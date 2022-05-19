@@ -10,10 +10,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<rest-assured.version>4.4.0</rest-assured.version>
 		<jackson.version>2.13.0</jackson.version>
-		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<maven.compiler.plugin.version>3.9.0</maven.compiler.plugin.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
+		<maven-surefire-plugin-version>3.0.0-M6</maven-surefire-plugin-version>
 		<env>test</env>
 	</properties>
 
@@ -152,7 +152,7 @@
 		<dependency>
 			<groupId>io.github.sskorol</groupId>
 			<artifactId>test-data-supplier</artifactId>
-			<version>1.9.7</version>
+			<version>1.9.6</version>
 		</dependency>
 
 
