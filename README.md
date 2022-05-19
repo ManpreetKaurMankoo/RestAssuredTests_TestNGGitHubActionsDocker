@@ -57,4 +57,4 @@ _________________________________
 - The same User.java POJO is being used for serialization and deserialization since the two fields (name, job) required are common in request and response.
 - Properties are being fetched from config.properties file using Owner library
 
-If more tests are to be added in future, new test cases needs to be added using the same Arrange, Act and Assert pattern each having its own DataSupplier where relevant file will be passed for test data. But the background implementation remains the same - just need to leverage it as it is.
+If more tests are to be added in future, new test cases need to be added using the same Arrange, Act and Assert pattern each having its own DataSupplier where relevant JSON file will be passed for test data and corresponding POJOs will be created. But the background implementation remains the same - just need to leverage it as it is.
