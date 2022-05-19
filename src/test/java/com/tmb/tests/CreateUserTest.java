@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 
 import com.tmb.pojos.User;
 
-import io.github.sskorol.core.DataSupplier;
 import io.github.sskorol.data.JsonReader;
 import io.restassured.response.Response;
 import one.util.streamex.StreamEx;
@@ -27,25 +26,16 @@ public final class CreateUserTest {
 		User userParsedResponse = parseResponse(response, User.class);
 
 		assertThat(response)
-		.gives201SuccessfulPostResponse()
-		.hasExpectedResponseJsonSchema()
-		.hasResponseTimeWithinTwoSecs()
-		.containsHeaderApplicationJson();
+				.gives201SuccessfulPostResponse()
+				.hasExpectedResponseJsonSchema()
+				.hasResponseTimeWithinTwoSecs()
+				.containsHeaderApplicationJson();
 
 		assertThat(userParsedResponse)
-		.hasName(data.getName())
-		.hasJob(data.getJob());
+				.hasName(data.getName())
+				.hasJob(data.getJob());
 	}
 
-	@DataSupplier
-	//	public StreamEx<User> getData() {
-	//		System.out.println("test file path: " + getUserTestDataJsonFilePath());
-	//		return use(JsonReader.class)
-	//				.withTarget(User.class)
-	////				.withSource("\\src\\test\\resources\\testdata\\testdata.json")
-	//				.withSource(getUserTestDataJsonFilePath())
-	//				.read();
-	//	}
 	public StreamEx<User> getData() {
 		return use(JsonReader.class)
 				.withTarget(User.class)
