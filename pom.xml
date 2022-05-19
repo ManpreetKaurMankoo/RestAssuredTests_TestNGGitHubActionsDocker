@@ -13,7 +13,9 @@
 		<maven.compiler.plugin.version>3.9.0</maven.compiler.plugin.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<aspectj.version>1.9.7</aspectj.version>
 		<maven-surefire-plugin-version>3.0.0-M6</maven-surefire-plugin-version>
+
 		<env>test</env>
 	</properties>
 
@@ -84,10 +86,20 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
+				
+				<dependencies>
+
+					<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
+				
 			</plugin>
 		</plugins>
 	</build>
-
 
 	<dependencies>
 
@@ -147,7 +159,7 @@
 			<artifactId>json-schema-validator</artifactId>
 			<version>4.5.0</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/io.github.sskorol/test-data-supplier -->
 		<dependency>
 			<groupId>io.github.sskorol</groupId>
