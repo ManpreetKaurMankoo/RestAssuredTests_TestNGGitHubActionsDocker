@@ -152,7 +152,7 @@
 		<dependency>
 			<groupId>io.github.sskorol</groupId>
 			<artifactId>test-data-supplier</artifactId>
-			<version>1.9.6</version>
+			<version>1.9.7</version>
 		</dependency>
 
 
