@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-19T17:29:34 IST" name="Suite" finished-at="2022-05-19T17:29:38 IST" duration-ms="3927">
+  <suite started-at="2022-05-19T17:36:12 IST" name="Suite" finished-at="2022-05-19T17:36:16 IST" duration-ms="3733">
     <groups>
     </groups>
-    <test started-at="2022-05-19T17:29:34 IST" name="Test" finished-at="2022-05-19T17:29:38 IST" duration-ms="3927">
+    <test started-at="2022-05-19T17:36:12 IST" name="Test" finished-at="2022-05-19T17:36:16 IST" duration-ms="3733">
       <class name="com.tmb.tests.CreateUserTest">
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@49b2a47d]" started-at="2022-05-19T17:29:35 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-19T17:29:38 IST" duration-ms="3394" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@49b2a47d]" started-at="2022-05-19T17:36:12 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-19T17:36:16 IST" duration-ms="3226" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@49b2a47d]" started-at="2022-05-19T17:29:38 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-19T17:29:38 IST" duration-ms="392" status="PASS">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@49b2a47d]" started-at="2022-05-19T17:36:16 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-19T17:36:16 IST" duration-ms="386" status="PASS">
           <params>
             <param index="0">
               <value>
