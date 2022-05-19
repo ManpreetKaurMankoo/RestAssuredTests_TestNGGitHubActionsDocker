@@ -7,6 +7,7 @@ import static com.tmb.utils.RequestCreatorUtility.hitPOSTAPI;
 import static com.tmb.utils.RequestTestDataBuilder.getUserPayload;
 import static com.tmb.utils.ResponseParserUtility.parseResponse;
 import static io.github.sskorol.data.TestDataReader.use;
+//import static com.tmb.constants.FrameworkConstants.getUserTestDataJsonFilePath;
 
 import org.testng.annotations.Test;
 
@@ -38,6 +39,7 @@ public final class CreateUserTest {
 
 	@DataSupplier
 //	public StreamEx<User> getData() {
+//		System.out.println("test file path: " + getUserTestDataJsonFilePath());
 //		return use(JsonReader.class)
 //				.withTarget(User.class)
 ////				.withSource("\\src\\test\\resources\\testdata\\testdata.json")
