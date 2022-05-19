@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-19T21:44:29 IST" name="Suite" finished-at="2022-05-19T21:44:29 IST" duration-ms="31">
+  <suite started-at="2022-05-19T21:54:09 IST" name="Suite" finished-at="2022-05-19T21:54:09 IST" duration-ms="146">
     <groups>
     </groups>
-    <test started-at="2022-05-19T21:44:29 IST" name="Test" finished-at="2022-05-19T21:44:29 IST" duration-ms="31">
+    <test started-at="2022-05-19T21:54:09 IST" name="Test" finished-at="2022-05-19T21:54:09 IST" duration-ms="146">
       <class name="com.tmb.tests.CreateUserTest">
-        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@798162bc]" started-at="2022-05-19T21:44:29 IST" name="createUserTest" finished-at="2022-05-19T21:44:29 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="createUserTest(com.tmb.pojos.User)[pri:0, instance:com.tmb.tests.CreateUserTest@798162bc]" started-at="2022-05-19T21:54:09 IST" name="createUserTest" data-provider="supplySeqData" finished-at="2022-05-19T21:54:09 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[
-Method public void com.tmb.tests.CreateUserTest.createUserTest(com.tmb.pojos.User) requires a @DataProvider named : getData]]>
+              <![CDATA[org.joor.ReflectException: java.lang.reflect.InvocationTargetException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void com.tmb.tests.CreateUserTest.createUserTest(com.tmb.pojos.User) requires a @DataProvider named : getData
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:561)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
+              <![CDATA[java.lang.RuntimeException: org.joor.ReflectException: java.lang.reflect.InvocationTargetException
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
 at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
 at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
@@ -41,9 +40,57 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.joor.ReflectException: java.lang.reflect.InvocationTargetException
+at org.joor.Reflect.on(Reflect.java:914)
+at org.joor.Reflect.call(Reflect.java:575)
+at io.github.sskorol.utils.ReflectionUtils.invokeDataSupplier(ReflectionUtils.java:69)
+at io.github.sskorol.model.DataSupplierMetaData.obtainReturnValue(DataSupplierMetaData.java:54)
+at io.github.sskorol.model.DataSupplierMetaData.transform(DataSupplierMetaData.java:40)
+at io.github.sskorol.model.DataSupplierMetaData.<init>(DataSupplierMetaData.java:36)
+at io.github.sskorol.core.DataProviderTransformer.getMetaData(DataProviderTransformer.java:43)
+at io.github.sskorol.core.DataProviderTransformer.supplySeqData(DataProviderTransformer.java:23)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.joor.Reflect.on(Reflect.java:910)
+... 39 more
+Caused by: org.joor.ReflectException: java.lang.reflect.InvocationTargetException
+at org.joor.Reflect.on(Reflect.java:914)
+at org.joor.Reflect.call(Reflect.java:575)
+at org.joor.Reflect.call(Reflect.java:528)
+at io.github.sskorol.data.TestDataReader$DataBuilder.read(TestDataReader.java:54)
+at com.tmb.tests.CreateUserTest.getData(CreateUserTest.java:45)
+... 44 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.joor.Reflect.on(Reflect.java:910)
+... 48 more
+Caused by: java.lang.IllegalArgumentException: Unable to read CSV data to class com.tmb.pojos.User. Check provided path.
+at io.github.sskorol.data.JsonReader.read(JsonReader.java:42)
+... 53 more
+Caused by: java.io.IOException: Unable to access resource specified by testdata.json path
+at io.github.sskorol.utils.ReflectionUtils.lambda$getSourcePath$6(ReflectionUtils.java:103)
+at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+at io.github.sskorol.utils.ReflectionUtils.getSourcePath(ReflectionUtils.java:103)
+at io.github.sskorol.data.DataReader.getUrl(DataReader.java:19)
+at io.github.sskorol.data.JsonReader.read(JsonReader.java:34)
+... 53 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->

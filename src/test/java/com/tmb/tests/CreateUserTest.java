@@ -27,14 +27,14 @@ public final class CreateUserTest {
 		User userParsedResponse = parseResponse(response, User.class);
 
 		assertThat(response)
-		.gives201SuccessfulPostResponse()
-		.hasExpectedResponseJsonSchema()
-		.hasResponseTimeWithinTwoSecs()
-		.containsHeaderApplicationJson();
+				.gives201SuccessfulPostResponse()
+				.hasExpectedResponseJsonSchema()
+				.hasResponseTimeWithinTwoSecs()
+				.containsHeaderApplicationJson();
 
 		assertThat(userParsedResponse)
-		.hasName(data.getName())
-		.hasJob(data.getJob());
+				.hasName(data.getName())
+				.hasJob(data.getJob());
 	}
 
 	@DataSupplier

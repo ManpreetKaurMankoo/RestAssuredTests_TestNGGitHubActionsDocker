@@ -9,13 +9,41 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">31</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">146</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tmb.tests.CreateUserTest</td><td><a href="#m0">createUserTest</a></td><td rowspan="1">1652976869957</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.tmb.tests.CreateUserTest</td><td><a href="#m0">createUserTest</a></td><td rowspan="1">1652977449316</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Method public void com.tmb.tests.CreateUserTest.createUserTest(com.tmb.pojos.User) requires a @DataProvider named : getData
+<h2>Test</h2><h3 id="m0">com.tmb.tests.CreateUserTest#createUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: org.joor.ReflectException: java.lang.reflect.InvocationTargetException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.joor.Reflect.on(Reflect.java:914)
+	at org.joor.Reflect.call(Reflect.java:575)
+	at io.github.sskorol.utils.ReflectionUtils.invokeDataSupplier(ReflectionUtils.java:69)
+	at io.github.sskorol.model.DataSupplierMetaData.obtainReturnValue(DataSupplierMetaData.java:54)
+	at io.github.sskorol.model.DataSupplierMetaData.transform(DataSupplierMetaData.java:40)
+	at io.github.sskorol.model.DataSupplierMetaData.&lt;init&gt;(DataSupplierMetaData.java:36)
+	at io.github.sskorol.core.DataProviderTransformer.getMetaData(DataProviderTransformer.java:43)
+	at io.github.sskorol.core.DataProviderTransformer.supplySeqData(DataProviderTransformer.java:23)
+	... 25 more
+	at org.joor.Reflect.on(Reflect.java:910)
+	... 39 more
+	at org.joor.Reflect.on(Reflect.java:914)
+	at org.joor.Reflect.call(Reflect.java:575)
+	at org.joor.Reflect.call(Reflect.java:528)
+	at io.github.sskorol.data.TestDataReader$DataBuilder.read(TestDataReader.java:54)
+	at com.tmb.tests.CreateUserTest.getData(CreateUserTest.java:45)
+	... 44 more
+	at org.joor.Reflect.on(Reflect.java:910)
+	... 48 more
+Caused by: java.lang.IllegalArgumentException: Unable to read CSV data to class com.tmb.pojos.User. Check provided path.
+	at io.github.sskorol.data.JsonReader.read(JsonReader.java:42)
+	... 53 more
+Caused by: java.io.IOException: Unable to access resource specified by testdata.json path
+	at io.github.sskorol.utils.ReflectionUtils.lambda$getSourcePath$6(ReflectionUtils.java:103)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at io.github.sskorol.utils.ReflectionUtils.getSourcePath(ReflectionUtils.java:103)
+	at io.github.sskorol.data.DataReader.getUrl(DataReader.java:19)
+	at io.github.sskorol.data.JsonReader.read(JsonReader.java:34)
+	... 53 more
+... Removed 44 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

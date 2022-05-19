@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.tmb.tests.CreateUserTest" class="method navigator-link" hash-for-method="createUserTest">createUserTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.tmb.tests.CreateUserTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,15 +130,43 @@
                   <a name="createUserTest">
                   </a> <!-- createUserTest -->
                   <span class="method-name">createUserTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Method public void com.tmb.tests.CreateUserTest.createUserTest(com.tmb.pojos.User) requires a @DataProvider named : getData
+                  <div class="stack-trace">java.lang.RuntimeException: org.joor.ReflectException: java.lang.reflect.InvocationTargetException
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 24 stack frames
+	at org.joor.Reflect.on(Reflect.java:914)
+	at org.joor.Reflect.call(Reflect.java:575)
+	at io.github.sskorol.utils.ReflectionUtils.invokeDataSupplier(ReflectionUtils.java:69)
+	at io.github.sskorol.model.DataSupplierMetaData.obtainReturnValue(DataSupplierMetaData.java:54)
+	at io.github.sskorol.model.DataSupplierMetaData.transform(DataSupplierMetaData.java:40)
+	at io.github.sskorol.model.DataSupplierMetaData.&lt;init&gt;(DataSupplierMetaData.java:36)
+	at io.github.sskorol.core.DataProviderTransformer.getMetaData(DataProviderTransformer.java:43)
+	at io.github.sskorol.core.DataProviderTransformer.supplySeqData(DataProviderTransformer.java:23)
+	... 25 more
+	at org.joor.Reflect.on(Reflect.java:910)
+	... 39 more
+	at org.joor.Reflect.on(Reflect.java:914)
+	at org.joor.Reflect.call(Reflect.java:575)
+	at org.joor.Reflect.call(Reflect.java:528)
+	at io.github.sskorol.data.TestDataReader$DataBuilder.read(TestDataReader.java:54)
+	at com.tmb.tests.CreateUserTest.getData(CreateUserTest.java:45)
+	... 44 more
+	at org.joor.Reflect.on(Reflect.java:910)
+	... 48 more
+Caused by: java.lang.IllegalArgumentException: Unable to read CSV data to class com.tmb.pojos.User. Check provided path.
+	at io.github.sskorol.data.JsonReader.read(JsonReader.java:42)
+	... 53 more
+Caused by: java.io.IOException: Unable to access resource specified by testdata.json path
+	at io.github.sskorol.utils.ReflectionUtils.lambda$getSourcePath$6(ReflectionUtils.java:103)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at io.github.sskorol.utils.ReflectionUtils.getSourcePath(ReflectionUtils.java:103)
+	at io.github.sskorol.data.DataReader.getUrl(DataReader.java:19)
+	at io.github.sskorol.data.JsonReader.read(JsonReader.java:34)
+	... 53 more
+... Removed 44 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
